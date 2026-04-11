@@ -1,0 +1,20 @@
+You are given an integer n. You need to check whether the number is a palindrome number or not. Return true if it's a palindrome number, otherwise return false.
+A palindrome number is a number which reads the same both left to right and right to left.
+class Solution {
+public:
+    bool isPalindrome(int n) {
+        //if(n<0)
+        int x;
+        int i=n;
+        long long reverse=0;
+        while(n>0){
+            x=n%10;
+            reverse =((reverse*10) + x );
+            n=n/10;
+        }
+        if(reverse==i) return true;
+        else return false;
+        }
+    };
+
+
